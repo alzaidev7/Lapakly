@@ -1,0 +1,979 @@
+
+/* ========================================
+   1. DASAR WEBSITE
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F3F6F2;
+    color: #102A22;
+    line-height: 1.6;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible {
+    outline: 3px solid #8BBF55;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   2. NAVIGASI
+======================================== */
+
+.menu-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 18px max(5%, calc((100% - 1100px) / 2));
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #E2E8E1;
+}
+
+.logo-menu {
+    color: #102A22;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo-menu span,
+.logo-kaki span {
+    color: #8BBF55;
+}
+
+.daftar-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.tautan-menu {
+    color: #526158;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tautan-menu:hover {
+    color: #719D43;
+}
+
+/* ========================================
+   3. HERO / BAGIAN PEMBUKA
+======================================== */
+
+.hero-web {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+    max-width: 1100px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 64px 32px;
+}
+
+.isi-hero {
+    flex: 1.2;
+    min-width: 0;
+    max-width: 610px;
+}
+
+.label-hero {
+    margin: 0 0 14px;
+    color: #6B963C;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.judul-hero {
+    margin: 0 0 20px;
+    color: #102A22;
+    font-size: clamp(36px, 4.2vw, 52px);
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.deskripsi-hero {
+    max-width: 540px;
+    margin: 0;
+    color: #58645B;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.aksi-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.tombol-utama,
+.tombol-kedua {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 21px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.tombol-utama {
+    background: #102A22;
+    color: #FFFFFF;
+}
+
+.tombol-utama:hover {
+    background: #244A3C;
+    transform: translateY(-2px);
+}
+
+.tombol-kedua {
+    border-color: #D5DED3;
+    background: transparent;
+    color: #102A22;
+}
+
+.tombol-kedua:hover {
+    background: #EAF0E7;
+}
+
+.catatan-hero {
+    margin: 22px 0 0;
+    color: #718076;
+    font-size: 12px;
+}
+
+/* Kartu dekoratif hero */
+
+.hiasan-hero {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.kartu-sambutan {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    padding: 34px;
+    overflow: hidden;
+    border: 1px solid #E2E8E1;
+    border-radius: 24px;
+    background: #FFFFFF;
+    box-shadow: 0 20px 55px rgba(16, 42, 34, 0.08);
+}
+
+.kartu-sambutan::after {
+    position: absolute;
+    top: -48px;
+    right: -48px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #EFF8E5;
+    content: "";
+}
+
+.ikon-sambutan {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: #D7F5A5;
+    color: #102A22;
+    font-size: 30px;
+}
+
+.label-kartu {
+    margin: 30px 0 8px;
+    color: #6B963C;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.judul-kartu {
+    margin: 0 0 10px;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.isi-kartu {
+    margin: 0;
+    color: #58645B;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.hiasan-garis {
+    width: 100%;
+    height: 1px;
+    margin: 26px 0 14px;
+    background: #E2E8E1;
+}
+
+.teks-kecil {
+    margin: 0;
+    color: #718076;
+    font-size: 12px;
+}
+
+/* ========================================
+   4. KATALOG PRODUK
+======================================== */
+
+.bagian-katalog {
+    max-width: 1164px;
+    margin: 12px auto 0;
+    padding: 60px 32px;
+}
+
+.kepala-katalog {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.judul-katalog {
+    margin: 0 0 8px;
+    color: #102A22;
+    font-size: clamp(28px, 3vw, 36px);
+    line-height: 1.25;
+    letter-spacing: -0.7px;
+}
+
+.deskripsi-katalog {
+    margin: 0;
+    color: #58645B;
+    font-size: 14px;
+}
+
+.jumlah-produk {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: 1px solid #E2E8E1;
+    border-radius: 30px;
+    background: #FFFFFF;
+    color: #526158;
+    font-size: 12px;
+}
+
+.daftar-produk {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.kartu-produk {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #E2E8E1;
+    border-radius: 17px;
+    background: #FFFFFF;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.kartu-produk:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(16, 42, 34, 0.07);
+}
+
+.gambar-produk {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #E5E9D9;
+}
+
+.gambar-kopi {
+    background: #E5E9D9;
+}
+
+.gambar-roti {
+    background: #F5E8D5;
+}
+
+.gambar-kue {
+    background: #F1DFE1;
+}
+
+.foto-produk {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.kartu-produk:hover .foto-produk {
+    transform: scale(1.04);
+}
+
+.label-produk {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    padding: 6px 11px;
+    border-radius: 30px;
+    background: #D7F5A5;
+    color: #102A22;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.isi-produk {
+    padding: 20px;
+}
+
+.kategori-produk {
+    margin: 0 0 7px;
+    color: #6B963C;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.nama-produk {
+    margin: 0 0 9px;
+    color: #102A22;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.deskripsi-produk {
+    min-height: 44px;
+    margin: 0 0 20px;
+    color: #718076;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.baris-harga {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #EDF0EB;
+}
+
+.harga-produk {
+    margin: 0;
+    color: #102A22;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.tombol-produk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: 9px 13px;
+    border-radius: 7px;
+    background: #102A22;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tombol-produk:hover {
+    background: #244A3C;
+}
+
+.catatan-katalog {
+    margin: 20px 0 0;
+    color: #718076;
+    font-size: 12px;
+}
+
+/* ========================================
+   5. TENTANG LAPAKLY
+======================================== */
+
+.bagian-tentang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: 1100px;
+    margin: 24px auto 60px;
+    padding: 60px 48px;
+    border: 1px solid #E2E8E1;
+    border-radius: 24px;
+    background: #FFFFFF;
+}
+
+.isi-tentang {
+    flex: 1.2;
+    min-width: 0;
+}
+
+.judul-tentang {
+    margin: 0 0 18px;
+    font-size: clamp(29px, 3.5vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.deskripsi-tentang {
+    max-width: 520px;
+    margin: 0 0 26px;
+    color: #58645B;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hiasan-tentang {
+    flex: 0.8;
+    padding: 35px 24px;
+    border: 1px solid #E2E8E1;
+    border-radius: 20px;
+    background: #EFF6E8;
+    text-align: center;
+}
+
+.ikon-tentang {
+    display: inline-block;
+    color: #6B963C;
+    font-size: 54px;
+    line-height: 1.2;
+}
+
+.judul-hiasan {
+    margin: 16px 0 8px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.teks-hiasan {
+    margin: 0;
+    color: #58645B;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   6. AJAKAN MENGHUBUNGI
+======================================== */
+
+.ajakan-kontak {
+    margin: 0 auto 70px;
+    padding: 52px 24px;
+    text-align: center;
+}
+
+.ajakan-kontak .label-hero {
+    margin-bottom: 12px;
+}
+
+.ajakan-kontak h2 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.3;
+}
+
+.ajakan-kontak > p:not(.label-hero) {
+    max-width: 530px;
+    margin: 0 auto 24px;
+    color: #58645B;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   7. FOOTER
+======================================== */
+
+.kaki-web {
+    padding: 52px 32px 20px;
+    background: #102A22;
+    color: #FFFFFF;
+}
+
+.isi-kaki {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 44px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tentang-kaki {
+    min-width: 0;
+}
+
+.logo-kaki {
+    display: inline-block;
+    margin: 0 0 12px;
+    color: #FFFFFF;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.tentang-kaki p {
+    max-width: 340px;
+    margin: 0;
+    color: #C5D2CA;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.tautan-kaki,
+.kontak-kaki {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.tautan-kaki h2,
+.kontak-kaki h2 {
+    margin: 5px 0 8px;
+    font-size: 15px;
+}
+
+.tautan-kaki a,
+.kontak-kaki a {
+    color: #C5D2CA;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tautan-kaki a:hover,
+.kontak-kaki a:hover {
+    color: #D7F5A5;
+}
+
+.garis-kaki {
+    max-width: 1100px;
+    height: 1px;
+    margin: 36px auto 18px;
+    background: #385047;
+}
+
+.hak-cipta {
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #C5D2CA;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ========================================
+   8. RESPONSIF TABLET
+======================================== */
+
+@media (max-width: 900px) {
+    .hero-web {
+        gap: 30px;
+        min-height: 430px;
+        padding: 50px 24px;
+    }
+
+    .judul-hero {
+        font-size: 38px;
+    }
+
+    .kartu-sambutan {
+        padding: 26px;
+    }
+
+    .bagian-katalog {
+        padding: 48px 24px;
+    }
+
+    .daftar-produk {
+        gap: 16px;
+    }
+
+    .gambar-produk {
+        height: 190px;
+    }
+
+    .isi-produk {
+        padding: 16px;
+    }
+
+    .bagian-tentang {
+        margin-right: 24px;
+        margin-left: 24px;
+        padding: 42px 30px;
+        gap: 30px;
+    }
+}
+
+/* ========================================
+   9. RESPONSIF HP
+======================================== */
+
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .menu-nav {
+        padding: 14px 16px;
+        gap: 10px;
+    }
+
+    .logo-menu {
+        font-size: 23px;
+    }
+
+    .daftar-menu {
+        gap: 12px;
+    }
+
+    .tautan-menu {
+        font-size: 12px;
+    }
+
+    .hero-web {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+        min-height: auto;
+        padding: 45px 22px 30px;
+    }
+
+    .isi-hero,
+    .hiasan-hero {
+        width: 100%;
+        max-width: none;
+    }
+
+    .judul-hero {
+        font-size: clamp(32px, 8vw, 42px);
+        letter-spacing: -1px;
+    }
+
+    .deskripsi-hero {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .aksi-hero {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .tombol-utama,
+    .tombol-kedua {
+        width: 100%;
+    }
+
+    .catatan-hero {
+        font-size: 11px;
+    }
+
+    .kartu-sambutan {
+        max-width: none;
+        padding: 26px;
+        border-radius: 20px;
+    }
+
+    .judul-kartu {
+        font-size: 24px;
+    }
+
+    .bagian-katalog {
+        margin-top: 10px;
+        padding: 42px 20px;
+    }
+
+    .kepala-katalog {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .judul-katalog {
+        font-size: 29px;
+    }
+
+    .daftar-produk {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .gambar-produk {
+        height: 220px;
+    }
+
+    .isi-produk {
+        padding: 20px;
+    }
+
+    .deskripsi-produk {
+        min-height: 0;
+    }
+
+    .bagian-tentang {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+        margin: 10px 16px 40px;
+        padding: 32px 22px;
+        border-radius: 20px;
+    }
+
+    .judul-tentang {
+        font-size: 30px;
+    }
+
+    .hiasan-tentang {
+        padding: 30px 20px;
+    }
+
+    .ajakan-kontak {
+        margin-bottom: 35px;
+        padding: 35px 22px;
+    }
+
+    .kaki-web {
+        padding: 38px 22px 20px;
+    }
+
+    .isi-kaki {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .garis-kaki {
+        margin-top: 30px;
+    }
+}
+
+/* ========================================
+   10. HP SANGAT SEMPIT
+======================================== */
+
+@media (max-width: 360px) {
+    .menu-nav {
+        padding: 13px 11px;
+        gap: 8px;
+    }
+
+    .logo-menu {
+        font-size: 20px;
+    }
+
+    .daftar-menu {
+        gap: 8px;
+    }
+
+    .tautan-menu {
+        font-size: 11px;
+    }
+
+    .hero-web {
+        padding: 35px 16px 24px;
+    }
+
+    .judul-hero {
+        font-size: 30px;
+    }
+
+    .bagian-katalog {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .bagian-tentang {
+        margin-right: 12px;
+        margin-left: 12px;
+        padding: 26px 18px;
+    }
+}
+
+/* ========================================
+   11. PENGATURAN AKSESIBILITAS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ===== FORM TAMBAH PRODUK LAPAKLY ===== */
+
+.halaman-tambah {
+    width: min(100% - 32px, 720px);
+    margin: 36px auto;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e3e9e3;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(16, 42, 34, 0.07);
+    box-sizing: border-box;
+}
+
+.halaman-tambah h1 {
+    margin: 0 0 8px;
+    color: #102a22;
+    font-size: clamp(26px, 5vw, 34px);
+    letter-spacing: -1px;
+}
+
+.halaman-tambah > p {
+    margin: 0 0 28px;
+    color: #68756e;
+    line-height: 1.6;
+}
+
+.halaman-tambah form {
+    display: grid;
+    gap: 20px;
+}
+
+.halaman-tambah form > div {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+.halaman-tambah label {
+    color: #203c31;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.halaman-tambah input,
+.halaman-tambah textarea,
+.halaman-tambah select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #dce4dd;
+    border-radius: 10px;
+    background: #fbfcfa;
+    color: #102a22;
+    font: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.halaman-tambah input:focus,
+.halaman-tambah textarea:focus,
+.halaman-tambah select:focus {
+    border-color: #426e55;
+    box-shadow: 0 0 0 3px rgba(66, 110, 85, 0.12);
+}
+
+.halaman-tambah textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.halaman-tambah small {
+    color: #78847d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.halaman-tambah button {
+    width: 100%;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 11px;
+    background: #102a22;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.halaman-tambah button:hover {
+    background: #244b39;
+}
+
+.halaman-tambah button:active {
+    transform: scale(0.98);
+}
+
+.halaman-tambah > form > a {
+    color: #426e55;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.halaman-tambah > form > a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .halaman-tambah {
+        width: calc(100% - 24px);
+        margin: 16px auto;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .halaman-tambah form {
+        gap: 17px;
+    }
+}
